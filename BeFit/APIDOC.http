@@ -1,0 +1,61 @@
+###  Add a User
+POST http://127.0.0.1:8000/register/ 
+Content-Type: application/json
+
+{
+    "username" : "Deepu123",
+    "email" : "deepu123@gmail.com",
+    "password" : "deepu123"
+}
+
+### List all the Users
+GET  http://127.0.0.1:8000/register/ 
+Accept: application/json
+
+### Delete a User
+DELETE http://127.0.0.1:8000/register/1/
+
+### Add Memberships By the Admin
+POST http://127.0.0.1:8000/membership/
+Content-Type: application/json
+Authorization: Basic Athul123:athul123
+
+{
+    "member" : 4,
+    "plan_name" : "3 MOnth Membership",
+    "duration" : "90 Days",
+    "amount" : 3500,
+    "start_date" : "2026-11-16",
+    "end_date": "2027-2-15",
+    "status" : "Active"
+}
+
+### List all Memberships by the Admin
+GET  http://127.0.0.1:8000/membership/
+Accept: application/json
+Authorization: Basic Athul123:athul123
+
+### Retrieve One MemberShip
+GET  http://127.0.0.1:8000/membership/8/
+Accept: application/json
+Authorization: Basic Athul123:athul123
+
+### Update MemberShip
+PUT  http://127.0.0.1:8000/membership/9/
+Content-Type: application/json
+Authorization: Basic Athul123:athul123
+
+{
+    
+    "member" : 2,
+    "plan_name" : "1 MOnth Membership",
+    "duration" : "30 Days",
+    "amount" : 2000,
+    "start_date" : "2026-11-16",
+    "end_date": "2027-12-15",
+    "status" : "Active"
+}
+
+### Delete a MemberShip
+DELETE    http://127.0.0.1:8000/membership/10/
+Authorization: Basic Athul123:athul123
